@@ -1,4 +1,4 @@
-package es.uclm.es.isoft2.SwBuilders.DGT;
+package es.uclm.esi.isoft2.SwBuilders.DGT;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
