@@ -6,6 +6,7 @@ public class Inquiry {
 	private Object _speed;
 	private Object _maxSpeed;
 	private Object _sanction;
+	public Sanction _...;
 
 	public void getId() {
 		return this._id;

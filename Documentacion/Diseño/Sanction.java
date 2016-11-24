@@ -5,6 +5,7 @@ public class Sanction {
 	private Object _dateOfReception;
 	private Object _dateOfPayment;
 	private Object _sanctionHolder;
+	public Inquiry _...;
 
 	public void getId() {
 		return this._id;
