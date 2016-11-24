@@ -1,8 +1,10 @@
+package es.uclm.esi.isoft2.SwBuilders.DGT;
+
 public class Owner {
 	private Object _inquiries;
 	private Object _vehicles;
 
-	public void getInquiries()  {
+	public Object getInquiries()  {
 		return this._inquiries;
 	}
 
@@ -10,7 +12,7 @@ public class Owner {
 		this._inquiries = aInquiries;
 	}
 
-	public void getVehicles() {
+	public Object getVehicles() {
 		return this._vehicles;
 	}
 

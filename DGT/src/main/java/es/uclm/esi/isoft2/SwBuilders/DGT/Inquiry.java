@@ -1,3 +1,5 @@
+package es.uclm.esi.isoft2.SwBuilders.DGT;
+
 public class Inquiry {
 	private Object _id;
 	private Object _dateOfIssue;
@@ -7,7 +9,7 @@ public class Inquiry {
 	private Object _maxSpeed;
 	private Object _sanction;
 
-	public void getId()  {
+	public Object getId()  {
 		return this._id;
 	}
 
@@ -16,7 +18,7 @@ public class Inquiry {
 	
 	}
 
-	public void getDateOfIssue() {
+	public Object getDateOfIssue() {
 		return this._dateOfIssue;
 	}
 
@@ -24,7 +26,7 @@ public class Inquiry {
 		this._dateOfIssue = aDateOfIssue;
 	}
 
-	public void getLocation() {
+	public Object getLocation() {
 		return this._location;
 	}
 
@@ -32,7 +34,7 @@ public class Inquiry {
 		this._location = aLocation;
 	}
 
-	public void getOwner() {
+	public Object getOwner() {
 		return this._owner;
 	}
 
@@ -40,7 +42,7 @@ public class Inquiry {
 		this._owner = aOwner;
 	}
 
-	public void getSpeed() {
+	public Object getSpeed() {
 		return this._speed;
 	}
 
@@ -48,7 +50,7 @@ public class Inquiry {
 		this._speed = aSpeed;
 	}
 
-	public void getMaxSpeed() {
+	public Object getMaxSpeed() {
 		return this._maxSpeed;
 	}
 
@@ -56,7 +58,7 @@ public class Inquiry {
 		this._maxSpeed = aMaxSpeed;
 	}
 
-	public void getSanction() {
+	public Object getSanction() {
 		return this._sanction;
 	}
 

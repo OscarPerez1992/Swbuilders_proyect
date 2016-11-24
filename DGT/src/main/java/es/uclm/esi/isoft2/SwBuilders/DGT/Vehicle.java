@@ -1,3 +1,5 @@
+package es.uclm.esi.isoft2.SwBuilders.DGT;
+
 public class Vehicle {
 	private Object _license;
 	private Object _owner;
@@ -7,7 +9,7 @@ public class Vehicle {
 	
 	}
 
-	public void getLicense() {
+	public Object getLicense() {
 		return this._license;
 	}
 
@@ -15,7 +17,7 @@ public class Vehicle {
 		this._license = aLicense;
 	}
 
-	public void getOwner() {
+	public Object getOwner() {
 		return this._owner;
 	}
 
