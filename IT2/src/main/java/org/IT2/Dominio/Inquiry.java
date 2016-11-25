@@ -64,3 +64,4 @@ public class Inquiry {
 		this._sanction = aSanction;
 	}
 }
+//MODIFICADO ITERACION 2

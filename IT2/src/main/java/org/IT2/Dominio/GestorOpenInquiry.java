@@ -36,3 +36,4 @@ public class GestorOpenInquiry {
 		this._maxSpeed = aMaxSpeed;
 	}
 }
+//MODIFICADO ITERACION 2
