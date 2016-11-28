@@ -13,6 +13,7 @@ public class AppTest
     /**
      * Create the test case
      *
+     *
      * @param testName name of the test case
      */
     public AppTest( String testName )
@@ -22,6 +23,7 @@ public class AppTest
 
     /**
      * @return the suite of tests being tested
+     * 
      */
     public static Test suite()
     {
@@ -30,6 +32,7 @@ public class AppTest
 
     /**
      * Rigourous Test :-)
+     * 
      */
     public void testApp()
     {
