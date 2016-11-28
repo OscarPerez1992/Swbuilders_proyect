@@ -1,11 +1,11 @@
 public class GestorPay {
-	private Object _idSanction;
+	private Object idSanction;
 
 	public void getIdSanction() {
-		return this._idSanction;
+		return this.idSanction;
 	}
 
 	public void setIdSanction(Object aIdSanction) {
-		this._idSanction = aIdSanction;
+		this.idSanction = aIdSanction;
 	}
 }
