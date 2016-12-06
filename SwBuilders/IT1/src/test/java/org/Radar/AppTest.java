@@ -1,4 +1,4 @@
-package org.IT3;
+package org.Radar;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -13,7 +13,6 @@ public class AppTest
     /**
      * Create the test case
      *
-     *
      * @param testName name of the test case
      */
     public AppTest( String testName )
@@ -23,7 +22,6 @@ public class AppTest
 
     /**
      * @return the suite of tests being tested
-     * 
      */
     public static Test suite()
     {
@@ -32,7 +30,6 @@ public class AppTest
 
     /**
      * Rigourous Test :-)
-     * 
      */
     public void testApp()
     {
