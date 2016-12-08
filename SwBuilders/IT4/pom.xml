@@ -8,9 +8,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>es.uclm.esi.isoft2.SwBuilders</groupId>
-  <artifactId>IT4</artifactId>
+  <artifactId>IT2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>IT4</name>
+  <name>IT2</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
