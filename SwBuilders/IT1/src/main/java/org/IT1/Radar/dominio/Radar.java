@@ -4,5 +4,5 @@ public class Radar {
 	private int moneda;
 
 	//en construccion
-	//logica del radar del sistema
+	//logica del radar del sistem
 }
