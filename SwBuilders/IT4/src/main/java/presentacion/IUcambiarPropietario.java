@@ -33,7 +33,7 @@ public class IUcambiarPropietario extends JFrame{
 	}
 	
 	public IUcambiarPropietario(String titulo, Sistema sistema) {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(250, 150, 400, 200);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -64,6 +64,7 @@ public class IUcambiarPropietario extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				if (!textLicencia.getText().equals("") && !textDni.getText().equals(""))
 					sistema.cambiarPropietario(textLicencia.getText(),textDni.getText());
+				dispose();
 			}
 		});
 		btnCambiar.setBounds(250, 120, 117, 29);
@@ -81,7 +82,7 @@ public class IUcambiarPropietario extends JFrame{
 	}
 	
 	public void cerrar(){
-		System.exit(0);
+		dispose();
 		
 	}
 }
