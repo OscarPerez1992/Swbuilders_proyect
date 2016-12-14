@@ -2,10 +2,11 @@ package dominio;
 
 public class Sistema {
 
-	private Manager.ManagerHolder manager; 
+	private Manager manager; 
 	
 	public Sistema(){
-		manager = new Manager.ManagerHolder();			
+		manager =Manager.get();
+		
 	}
 	
 	public int abrirIncidencia(String license, double speed, String location, double maxSpeed){

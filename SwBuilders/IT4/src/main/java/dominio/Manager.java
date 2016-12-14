@@ -1,5 +1,6 @@
 package dominio;
 
+
 import persistencia.GeneralDao;
 import persistencia.OwnerDao;
 import persistencia.VehicleDao;
@@ -14,15 +15,15 @@ public class Manager {
 	private Manager() {	}
 	
 	public static class ManagerHolder {
-		public static Manager manager=new Manager();	
+		public static Manager manager=new Manager();
+	}
 	
-		/**
-		 * 
-		 * @return The only existing instance of the Manager
-		 */
-		public static Manager get() {
-			return ManagerHolder.manager;
-		}
+	/**
+	 * 
+	 * @return The only existing instance of the Manager
+	 */
+	public static Manager get() {
+		return ManagerHolder.manager;
 	}
 	
 	/**
