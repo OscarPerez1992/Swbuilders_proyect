@@ -64,6 +64,12 @@ public class Manager {
 		dao.update(sanction);
 	}
 	
+	/*public void pay(Sanction multa) {
+		multa.pay();
+		GeneralDao<Inquiry> dao=new GeneralDao<>();
+		dao.update(multa);
+	}*/
+	
 	/**
 	 * Executed from the user interface when a vehicle changes its owner
 	 * @param license The license number of the vehicle
