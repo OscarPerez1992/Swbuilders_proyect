@@ -78,6 +78,17 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
 	}
+	
+	@Test
+	public void test65_40() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 65, "La ronda", 40);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 300);
+		assertTrue(multa.getPoints() == 2);
+	}
 
 	@Test
 	public void test75_40() {
@@ -86,8 +97,8 @@ public class testPrueba extends TestCase {
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
 		assertNotNull(multa.getDateOfPayment());
-		assertTrue(multa.getAmount() == 300);
-		assertTrue(multa.getPoints() == 2);
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
 	}
 
 	@Test
@@ -97,8 +108,8 @@ public class testPrueba extends TestCase {
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
 		assertNotNull(multa.getDateOfPayment());
-		assertTrue(multa.getAmount() == 400);
-		assertTrue(multa.getPoints() == 4);
+		assertTrue(multa.getAmount() == 500);
+		assertTrue(multa.getPoints() == 6);
 	}
 
 	@Test
@@ -108,20 +119,10 @@ public class testPrueba extends TestCase {
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
 		assertNotNull(multa.getDateOfPayment());
-		assertTrue(multa.getAmount() == 500);
-		assertTrue(multa.getPoints() == 6);
-	}
-
-	@Test
-	public void test100_40() {
-		Manager m = Manager.get();
-		int idExpediente = m.openInquiry("0001", 100, "La ronda", 40);
-		Sanction multa = m.identifyDriver(idExpediente, "5000002");
-		multa.pay();
-		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
 	}
+
 	
 	/**
 	 * LIMITE 50- GENERA INQUIRY Y SANCTION
@@ -331,7 +332,7 @@ public class testPrueba extends TestCase {
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
-	}
+	} 
 
 	@Test
 	public void test145_80() {
@@ -411,6 +412,66 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
 	}
+	
+	
+	/**
+	 * LIMITE 100- GENERA INQUIRY Y SANCTION
+	 */	
+	@Test
+	public void test110_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 110, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+
+	@Test
+	public void test140_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 140, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 300);
+		assertTrue(multa.getPoints() == 2);
+	}
+
+	@Test
+	public void test155_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 155, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	}
+
+	@Test
+	public void test165_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 165, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 500);
+		assertTrue(multa.getPoints() == 6);
+	}
+
+	@Test
+	public void test180_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 180, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 600);
+		assertTrue(multa.getPoints() == 6);
+	}
+	
 	
 	/**
 	 * LIMITE 110- GENERA INQUIRY Y SANCTION

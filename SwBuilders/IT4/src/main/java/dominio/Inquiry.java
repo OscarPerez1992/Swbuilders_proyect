@@ -62,7 +62,7 @@ public class Inquiry {
 		sanction.setAmount(amount);
 		GeneralDao<Sanction> daoSanction=new GeneralDao<>();
 		daoSanction.insert(sanction);
-		return sanction;
+		return sanction; 
 	}
 
 
