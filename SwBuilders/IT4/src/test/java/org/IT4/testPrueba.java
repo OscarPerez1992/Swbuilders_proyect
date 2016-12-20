@@ -302,6 +302,16 @@ public class testPrueba extends TestCase {
 	 * LIMITE 80- GENERA INQUIRY Y SANCTION
 	 */	
 	@Test
+	public void test81_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 81, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	} 
+	@Test
 	public void test90_80() {
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 90, "La ronda", 80);
@@ -311,7 +321,28 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
 	}
-
+	
+	@Test
+	public void test110_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 110, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	@Test
+	public void test111_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 111, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	
 	@Test
 	public void test120_80() {
 		Manager m = Manager.get();
@@ -322,7 +353,28 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
 	}
-
+	
+	@Test
+	public void test130_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 130, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	} 
+	@Test
+	public void test131_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 131, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	} 
+	
 	@Test
 	public void test135_80() {
 		Manager m = Manager.get();
@@ -335,6 +387,26 @@ public class testPrueba extends TestCase {
 	} 
 
 	@Test
+	public void test140_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 140, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 500);
+		assertTrue(multa.getPoints() == 6);
+	}
+	@Test
+	public void test141_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 141, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 500);
+		assertTrue(multa.getPoints() == 6);
+	}
+	@Test
 	public void test145_80() {
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 145, "La ronda", 80);
@@ -344,7 +416,27 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
 	}
+	@Test
+	public void test150_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 150, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 500);
+		assertTrue(multa.getPoints() == 6);
+	}
 
+	@Test
+	public void test151_80() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 151, "La ronda", 80);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 500);
+		assertTrue(multa.getPoints() == 6);
+	}
 	@Test
 	public void test160_80() {
 		Manager m = Manager.get();
@@ -359,6 +451,16 @@ public class testPrueba extends TestCase {
 	 * LIMITE 90- GENERA INQUIRY Y SANCTION
 	 */	
 	@Test
+	public void test91_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 91, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	@Test
 	public void test110_90() {
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 110, "La ronda", 90);
@@ -368,6 +470,27 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
 	}
+	@Test
+	public void test120_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 120, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	@Test
+	public void test121_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 121, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	
 
 	@Test
 	public void test130_90() {
@@ -379,7 +502,30 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
 	}
-
+	
+	
+	@Test
+	public void test140_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 140, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	
+	@Test
+	public void test141_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 141, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	
 	@Test
 	public void test145_90() {
 		Manager m = Manager.get();
@@ -390,7 +536,27 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
 	}
-
+	
+	@Test
+	public void test150_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 150, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	}
+	@Test
+	public void test151_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 151, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	}
 	@Test
 	public void test155_90() {
 		Manager m = Manager.get();
@@ -401,7 +567,26 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
 	}
-
+	@Test
+	public void test160_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 160, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	}
+	@Test
+	public void test161_90() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 161, "La ronda", 90);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 400);
+		assertTrue(multa.getPoints() == 4);
+	}
 	@Test
 	public void test170_90() {
 		Manager m = Manager.get();
@@ -418,6 +603,18 @@ public class testPrueba extends TestCase {
 	 * LIMITE 100- GENERA INQUIRY Y SANCTION
 	 */	
 	@Test
+	public void test101_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 101, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	
+	
+	@Test
 	public void test110_100() {
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 110, "La ronda", 100);
@@ -427,7 +624,27 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
 	}
-
+	@Test
+	public void test130_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 130, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	
+	@Test
+	public void test131_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 131, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
 	@Test
 	public void test140_100() {
 		Manager m = Manager.get();
@@ -438,7 +655,26 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
 	}
-
+	@Test
+	public void test150_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 150, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	@Test
+	public void test151_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 151, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
 	@Test
 	public void test155_100() {
 		Manager m = Manager.get();
@@ -449,7 +685,26 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
 	}
-
+	@Test
+	public void test160_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 160, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	@Test
+	public void test161_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 161, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
 	@Test
 	public void test165_100() {
 		Manager m = Manager.get();
@@ -460,7 +715,26 @@ public class testPrueba extends TestCase {
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
 	}
-
+	@Test
+	public void test170_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 170, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
+	@Test
+	public void test171_100() {
+		Manager m = Manager.get();
+		int idExpediente = m.openInquiry("0001", 171, "La ronda", 100);
+		Sanction multa = m.identifyDriver(idExpediente, "5000002");
+		multa.pay();
+		assertNotNull(multa.getDateOfPayment());
+		assertTrue(multa.getAmount() == 100);
+		assertTrue(multa.getPoints() == 0);
+	}
 	@Test
 	public void test180_100() {
 		Manager m = Manager.get();
