@@ -15,7 +15,7 @@ public class testPrueba extends TestCase {
  * LIMITE 30- GENERA INQUIRY Y SANCTION
  */
  //
-	@Test
+	@Test//HOLA
 	public void test31_30()  {
 		GeneralDao <Inquiry>gdao=new GeneralDao<>();
 
