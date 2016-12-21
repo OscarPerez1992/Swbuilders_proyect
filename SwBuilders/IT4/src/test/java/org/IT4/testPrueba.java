@@ -16,7 +16,7 @@ public class testPrueba extends TestCase {
  */
  //
 	@Test
-	public void test31_30() {
+	public void test31_30()  {
 		GeneralDao <Inquiry>gdao=new GeneralDao<>();
 
 		Manager m = Manager.get();
