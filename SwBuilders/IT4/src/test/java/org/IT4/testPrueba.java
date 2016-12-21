@@ -4,6 +4,10 @@ import org.junit.Test;
 
 import dominio.Manager;
 import dominio.Sanction;
+import persistencia.DriverDao;
+import dominio.Driver;
+import persistencia.GeneralDao;
+import dominio.Inquiry;
 import junit.framework.TestCase;
 
 public class testPrueba extends TestCase {
@@ -13,13 +17,32 @@ public class testPrueba extends TestCase {
  //
 	@Test
 	public void test31_30() {
+		GeneralDao <Inquiry>gdao=new GeneralDao<>();
+
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 31, "La ronda", 30);
+		
+		//comrpueba que existe
+		Inquiry incidencia = gdao.findById(Inquiry.class, idExpediente);
+		assertNotNull(incidencia);
+		
+		//obtiene los puntos del conductor para comprobar tras el indentifyDriver si los ha actualizado
+		DriverDao driverDao = new DriverDao();
+		Driver conductor = driverDao.findByDni("5000002");
+		int puntos=conductor.getPoints();
+		
+		//se identifica conductor (y restan puntos, que no lo hace y hay que solucionarlo en mantenimiento)
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
-		multa.pay();
+		multa.pay();//paga la multa
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
+		
+		//Comprueba lo nuevos puntos del conductor
+		conductor = driverDao.findByDni("5000002");
+		int puntosActualizados=conductor.getPoints();
+		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		
 	}
 	
 	@Test
