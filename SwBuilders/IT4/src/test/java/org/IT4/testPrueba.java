@@ -50,7 +50,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos==puntosActualizados);
 	
 	}
 	
@@ -83,7 +83,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos==puntosActualizados); 
 	}
 	
 	@Test
@@ -115,7 +115,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos==puntosActualizados); 
 	}
 
 	@Test
@@ -147,7 +147,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); 
 	}
 	
 	@Test
@@ -179,7 +179,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); 
 	}
 	
 	@Test
@@ -211,7 +211,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); 
 	}
 
 	@Test
@@ -243,7 +243,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados);
 	}
 	
 	@Test
@@ -275,7 +275,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); 
 	}
 	
 	@Test
@@ -285,7 +285,7 @@ public class testPrueba extends TestCase {
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 70, "La ronda", 30);
 		
-		//comrpueba que existe
+		//comrpueba que existe 
 		Inquiry incidencia = gdao.findById(Inquiry.class, idExpediente);
 		assertNotNull(incidencia);
 		
@@ -307,7 +307,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); 
 	}
 
 	@Test
@@ -339,7 +339,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); 
 	}
 	
 	@Test
@@ -371,7 +371,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados);
 	}
 	
 	@Test
@@ -403,7 +403,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -415,7 +415,7 @@ public class testPrueba extends TestCase {
 		
 		//comrpueba que existe
 		Inquiry incidencia = gdao.findById(Inquiry.class, idExpediente);
-		assertNotNull(incidencia);
+		assertNotNull(incidencia); 
 		
 		//obtiene los puntos del conductor para comprobar tras el indentifyDriver si los ha actualizado
 		DriverDao driverDao = new DriverDao();
@@ -435,7 +435,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -467,7 +467,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	/**
@@ -567,7 +567,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos==puntosActualizados); 
 	}
 	
 	@Test
@@ -599,7 +599,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); 
 	}
 	
 	@Test
@@ -631,7 +631,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); 
 	}
 	
 	@Test
@@ -663,7 +663,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -695,7 +695,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -727,7 +727,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -759,7 +759,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -791,7 +791,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -823,7 +823,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -855,7 +855,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -887,7 +887,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -919,7 +919,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	
@@ -1045,7 +1045,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1075,7 +1075,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1105,7 +1105,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1135,7 +1135,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1165,7 +1165,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1195,7 +1195,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1225,7 +1225,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1255,7 +1255,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1285,7 +1285,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1315,7 +1315,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1345,7 +1345,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	/**
@@ -1468,7 +1468,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1498,7 +1498,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1528,7 +1528,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1558,7 +1558,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1588,7 +1588,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1618,7 +1618,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1648,7 +1648,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1678,7 +1678,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1708,7 +1708,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1738,7 +1738,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}	
 	
 	@Test
@@ -1768,7 +1768,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	/**
@@ -1891,7 +1891,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1921,7 +1921,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -1951,7 +1951,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -1981,7 +1981,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2011,7 +2011,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2041,7 +2041,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -2071,7 +2071,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2101,7 +2101,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2131,7 +2131,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -2161,7 +2161,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2191,7 +2191,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	/**
@@ -2312,7 +2312,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2342,7 +2342,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2372,7 +2372,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	} 
 	@Test
 	public void test131_80() {
@@ -2401,7 +2401,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	} 
 	
 	@Test
@@ -2431,7 +2431,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	} 
 
 	@Test
@@ -2461,7 +2461,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test141_80() {
@@ -2490,7 +2490,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test145_80() {
@@ -2519,7 +2519,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test150_80() {
@@ -2548,7 +2548,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -2578,7 +2578,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test160_80() {
@@ -2607,7 +2607,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	/**
 	 * LIMITE 90- GENERA INQUIRY Y SANCTION
@@ -2726,7 +2726,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 
@@ -2757,7 +2757,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	
@@ -2788,7 +2788,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2818,7 +2818,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2848,7 +2848,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -2878,7 +2878,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test151_90() {
@@ -2907,7 +2907,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test155_90() {
@@ -2936,7 +2936,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test160_90() {
@@ -2965,7 +2965,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test161_90() {
@@ -2994,7 +2994,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test170_90() {
@@ -3023,7 +3023,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	
@@ -3147,7 +3147,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test140_100() {
@@ -3176,7 +3176,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test150_100() {
@@ -3205,7 +3205,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test151_100() {
@@ -3234,7 +3234,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test155_100() {
@@ -3263,7 +3263,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test160_100() {
@@ -3292,7 +3292,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test161_100() {
@@ -3321,7 +3321,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test165_100() {
@@ -3350,7 +3350,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test170_100() {
@@ -3379,7 +3379,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test171_100() {
@@ -3408,7 +3408,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	@Test
 	public void test180_100() {
@@ -3437,7 +3437,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	
@@ -3561,7 +3561,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3591,7 +3591,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3621,7 +3621,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -3651,7 +3651,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3681,7 +3681,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3711,7 +3711,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -3741,7 +3741,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3771,7 +3771,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3801,7 +3801,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -3831,7 +3831,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -3861,7 +3861,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	/**
@@ -3984,7 +3984,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4014,7 +4014,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4044,7 +4044,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-2==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -4074,7 +4074,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4104,7 +4104,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4134,7 +4134,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-4==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -4164,7 +4164,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4194,7 +4194,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4224,7 +4224,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 
 	@Test
@@ -4254,7 +4254,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4284,7 +4284,7 @@ public class testPrueba extends TestCase {
 		//Comprueba lo nuevos puntos del conductor
 		conductor = driverDao.findByDni("5000002");
 		int puntosActualizados=conductor.getPoints();
-		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
+		assertTrue(puntos-6==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
 	
 	@Test
@@ -4308,9 +4308,12 @@ public class testPrueba extends TestCase {
 	@Test 
 	public void testSistema() throws InterruptedException{
 		Sistema sistema= new Sistema();
-		Radar radar = new Radar();
+		Radar radar = new Radar(sistema,null);
 		Manager m = Manager.get();
+
 		String matricula=radar.generarMatricula();
+		assertNotNull(matricula);
+		radar.parar();
 		
 		int idExpediente =sistema.abrirIncidencia(matricula, 40, "Puertollano", 30);
 		assertNotNull(idExpediente);
@@ -4324,4 +4327,7 @@ public class testPrueba extends TestCase {
 		assertTrue(vehicle.getOwner().getDni().equals("5000000"));		
 		
 	}
+	
+
+		
 }

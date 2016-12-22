@@ -28,10 +28,7 @@ public class Radar {
 		this.sistema=sistema;
 		this.area=JTa;
 	}
-	
-	public Radar(){
-		
-	}
+
 
 	public void vigilar() throws InterruptedException {
 
@@ -41,9 +38,6 @@ public class Radar {
 			vMax = velocidadMaxima[(int) (Math.random() * velocidadMaxima.length)];
 			matricula = generarMatricula();
 			localizacion = listaLoscalizacion[(int) (Math.random() * listaLoscalizacion.length)];
-			//System.out.println("Coche generado:: localizacion: " + localizacion + ". Matricula: " + matricula
-			//		+ ". Velocidad: " + velocidad + ". Velocidad maxima permitida: " + vMax);
-
 			// comprueba si supera la velocidad y de ser así manda al servidor
 			if (vMax < velocidad)
 				abrirIncidencia(matricula, velocidad, String.valueOf(localizacion), vMax);

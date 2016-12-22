@@ -22,26 +22,7 @@ public class Owner extends SanctionHolder {
 		this.inquiries=new HashSet<>();
 		this.vehicles=new HashSet<>();
 	}	
-	
-	public Owner(String dni, String name, String lastName, String fullAddress) {
-		super(dni, name, lastName, fullAddress);
-	}
 
-	public Set<Inquiry> getInquiries() {
-		return inquiries;
-	}
-
-	public void setInquiries(Set<Inquiry> inquiries) {
-		this.inquiries = inquiries;
-	}
-	
-	public Set<Vehicle> getVehicles() {
-		return vehicles;
-	}
-	
-	public void setVehicles(Set<Vehicle> vehicles) {
-		this.vehicles = vehicles;
-	}
 
 	
 }

@@ -1,6 +1,7 @@
 package dominio;
 
 
+import persistencia.DriverDao;
 import persistencia.GeneralDao;
 import persistencia.OwnerDao;
 import persistencia.VehicleDao;
@@ -50,6 +51,15 @@ public class Manager {
 		GeneralDao<Inquiry> dao=new GeneralDao<>();
 		Inquiry inquiry=dao.findById(Inquiry.class, idInquiry);
 		Sanction sanction=inquiry.createSanctionFor(dni);
+		
+		//update al conductor con los nuevos puntos
+		int puntos = sanction.getPoints();
+
+		DriverDao dD= new DriverDao();
+		Driver driver=dD.findByDni(sanction.getSanctionHolder().getDni());
+		driver.setPoints(driver.getPoints()-puntos);
+		dD.update(driver);
+		
 		return sanction;
 	}
 	
