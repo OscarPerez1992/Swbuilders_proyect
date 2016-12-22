@@ -117,7 +117,7 @@ public class Inquiry {
 		} else if (maxSpeed==60) {
 			return amount(61,90,110,120,130);
 		} else if (maxSpeed==70) {
-			return amount(71,100,120,130,140);
+			return amount(71,100,120,130,140); 
 		} else if (maxSpeed==80) {
 			return amount(81,110,130,140,150);
 		} else if (maxSpeed==90) {

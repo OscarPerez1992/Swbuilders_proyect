@@ -53,12 +53,13 @@ public class Manager {
 		Sanction sanction=inquiry.createSanctionFor(dni);
 		
 		//update al conductor con los nuevos puntos
-		int puntos = sanction.getPoints();
+		int puntos = sanction.getPoints(); 
 
 		DriverDao dD= new DriverDao();
 		Driver driver=dD.findByDni(sanction.getSanctionHolder().getDni());
 		driver.setPoints(driver.getPoints()-puntos);
 		dD.update(driver);
+		//---
 		
 		return sanction;
 	}
