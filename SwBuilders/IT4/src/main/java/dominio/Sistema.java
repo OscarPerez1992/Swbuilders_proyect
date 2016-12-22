@@ -13,8 +13,8 @@ public class Sistema {
 		return manager.get().openInquiry(license, speed, location, maxSpeed);		
 	}
 	
-	public void sancionar(int idInquiry, String dni){
-		manager.get().identifyDriver(idInquiry, dni);	
+	public Sanction sancionar(int idInquiry, String dni){
+		return manager.get().identifyDriver(idInquiry, dni);	
 	}
 	
 	public void pagarSancion(int idsancion){

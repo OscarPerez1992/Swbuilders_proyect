@@ -73,7 +73,6 @@ public class Manager {
 	public void changeOwner(String license, String newDni) {
 		VehicleDao daoVehicle=new VehicleDao();
 		Vehicle vehicle=daoVehicle.findByLicense(license);
-		System.out.println(newDni);
 		OwnerDao daoOwner=new OwnerDao();
 		Owner owner=daoOwner.findByDni(newDni);
 		vehicle.setOwner(owner);

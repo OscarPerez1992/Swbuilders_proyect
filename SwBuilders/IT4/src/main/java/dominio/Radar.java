@@ -28,6 +28,10 @@ public class Radar {
 		this.sistema=sistema;
 		this.area=JTa;
 	}
+	
+	public Radar(){
+		
+	}
 
 	public void vigilar() throws InterruptedException {
 

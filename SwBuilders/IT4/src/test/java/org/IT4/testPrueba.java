@@ -3,10 +3,15 @@ package org.IT4;
 import org.junit.Test;
 
 import dominio.Manager;
+import dominio.Owner;
+import dominio.Radar;
 import dominio.Sanction;
+import dominio.Sistema;
+import dominio.Vehicle;
 import persistencia.DriverDao;
 import dominio.Driver;
 import persistencia.GeneralDao;
+import persistencia.VehicleDao;
 import dominio.Inquiry;
 import junit.framework.TestCase;
 
@@ -17,7 +22,7 @@ public class testPrueba extends TestCase {
  //
 	@Test
 	public void test31_30() {
-		GeneralDao <Inquiry>gdao=new GeneralDao<>();
+		GeneralDao <Inquiry>gdao=new GeneralDao<>(); 
 
 		Manager m = Manager.get();
 		int idExpediente = m.openInquiry("0001", 31, "La ronda", 30);
@@ -34,6 +39,10 @@ public class testPrueba extends TestCase {
 		//se identifica conductor (y restan puntos, que no lo hace y hay que solucionarlo en mantenimiento)
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();//paga la multa
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -63,6 +72,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -91,6 +104,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -119,6 +136,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -147,6 +168,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -175,6 +200,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());	
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -203,6 +232,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -231,6 +264,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -259,6 +296,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -287,6 +328,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -315,6 +360,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -343,6 +392,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -371,6 +424,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -399,6 +456,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -431,6 +492,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -459,6 +524,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -487,6 +556,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -515,6 +588,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+			
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -543,6 +620,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -571,6 +652,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -599,6 +684,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -627,6 +716,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+			
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -655,6 +748,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -683,6 +780,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -711,6 +812,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -739,6 +844,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -767,6 +876,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -795,6 +908,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -827,6 +944,10 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
+		
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -855,6 +976,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -883,6 +1006,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -911,6 +1036,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -939,6 +1066,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -967,6 +1096,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -995,6 +1126,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1023,6 +1156,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1051,6 +1186,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1079,6 +1216,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1107,6 +1246,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1135,6 +1276,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1163,6 +1306,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -1191,6 +1336,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -1222,6 +1369,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -1250,6 +1399,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -1278,6 +1429,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -1306,6 +1459,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -1334,6 +1489,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -1362,6 +1519,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -1390,6 +1549,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1418,6 +1579,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1446,6 +1609,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1474,6 +1639,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1502,6 +1669,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1530,6 +1699,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1558,6 +1729,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -1586,6 +1759,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -1617,6 +1792,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -1645,6 +1822,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -1673,6 +1852,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -1701,6 +1882,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -1729,6 +1912,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -1757,6 +1942,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -1785,6 +1972,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1813,6 +2002,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1841,6 +2032,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -1869,6 +2062,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1897,6 +2092,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1925,6 +2122,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -1953,6 +2152,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -1981,6 +2182,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -2012,6 +2215,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2039,6 +2244,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2067,6 +2274,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2094,6 +2303,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2122,6 +2333,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2150,6 +2363,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2177,6 +2392,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2205,6 +2422,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2233,6 +2452,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2260,6 +2481,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -2287,6 +2510,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -2314,6 +2539,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -2342,6 +2569,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -2369,6 +2598,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -2399,6 +2630,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2426,6 +2659,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2453,6 +2688,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2480,6 +2717,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2509,6 +2748,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2538,6 +2779,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2566,6 +2809,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2594,6 +2839,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2622,6 +2869,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2649,6 +2898,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -2676,6 +2927,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -2703,6 +2956,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -2730,6 +2985,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -2757,6 +3014,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -2789,6 +3048,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2818,6 +3079,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2845,6 +3108,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -2873,6 +3138,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2900,6 +3167,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2927,6 +3196,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -2954,6 +3225,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -2981,6 +3254,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3008,6 +3283,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3035,6 +3312,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3062,6 +3341,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3089,6 +3370,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3116,6 +3399,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -3143,6 +3428,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -3175,6 +3462,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -3203,6 +3492,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -3231,6 +3522,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -3259,6 +3552,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -3287,6 +3582,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -3315,6 +3612,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -3343,6 +3642,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3371,6 +3672,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3399,6 +3702,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3427,6 +3732,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3455,6 +3762,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3483,6 +3792,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3511,6 +3822,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -3539,6 +3852,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -3570,6 +3885,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -3598,6 +3915,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -3626,6 +3945,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 100);
 		assertTrue(multa.getPoints() == 0);
@@ -3654,6 +3975,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -3682,6 +4005,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -3710,6 +4035,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 300);
 		assertTrue(multa.getPoints() == 2);
@@ -3738,6 +4065,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3766,6 +4095,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3794,6 +4125,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 400);
 		assertTrue(multa.getPoints() == 4);
@@ -3822,6 +4155,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3850,6 +4185,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3878,6 +4215,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 500);
 		assertTrue(multa.getPoints() == 6);
@@ -3906,6 +4245,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -3934,6 +4275,8 @@ public class testPrueba extends TestCase {
 		
 		Sanction multa = m.identifyDriver(idExpediente, "5000002");
 		multa.pay();
+		//actualiza la multa en la bbdd
+		m.pay(multa.getId());
 		assertNotNull(multa.getDateOfPayment());
 		assertTrue(multa.getAmount() == 600);
 		assertTrue(multa.getPoints() == 6);
@@ -3943,5 +4286,42 @@ public class testPrueba extends TestCase {
 		int puntosActualizados=conductor.getPoints();
 		assertTrue(puntos==puntosActualizados); //en caso de restarle puntos: assertTrue(puntos==(puntosActualizados-X))
 	}
+	
+	@Test
+	public void testChangeOwner() {
+		Manager m = Manager.get();
+		VehicleDao vDao= new VehicleDao();
+		
+		Vehicle vehicle=vDao.findByLicense("0000");
+		String owner=vehicle.getOwner().getDni();
+		
+		m.changeOwner("0000", "5000003");
+		
+		vehicle=vDao.findByLicense("0000");
+		assertNotNull(vehicle);
+		String newOwner=vehicle.getOwner().getDni();	
+		assertFalse(owner==newOwner);
+		assertTrue(newOwner.equals("5000003"));
+		
+	}
 
+	@Test 
+	public void testSistema() throws InterruptedException{
+		Sistema sistema= new Sistema();
+		Radar radar = new Radar();
+		Manager m = Manager.get();
+		String matricula=radar.generarMatricula();
+		
+		int idExpediente =sistema.abrirIncidencia(matricula, 40, "Puertollano", 30);
+		assertNotNull(idExpediente);
+		Sanction multa=sistema.sancionar(idExpediente, "5000000");
+		assertNotNull(multa);
+		sistema.pagarSancion(multa.getId());
+		
+		sistema.cambiarPropietario("0000", "5000000");
+		VehicleDao vDao= new VehicleDao();
+		Vehicle vehicle=vDao.findByLicense("0000");
+		assertTrue(vehicle.getOwner().getDni().equals("5000000"));		
+		
+	}
 }
