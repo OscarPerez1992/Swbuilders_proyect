@@ -15,7 +15,7 @@ import persistencia.VehicleDao;
 import dominio.Inquiry;
 import junit.framework.TestCase;
 
-public class testPrueba extends TestCase {
+public class testPrueba extends TestCase { 
 /**
  * LIMITE 30- GENERA INQUIRY Y SANCTION
  */
