@@ -17,7 +17,7 @@ import junit.framework.TestCase;
 
 public class testPrueba extends TestCase { 
 /**
- * LIMITE 30- GENERA INQUIRY Y SANCTION
+ * LIMITE 30- GENERA INQUIRY Y SANCTION 
  */
  //
 	@Test
