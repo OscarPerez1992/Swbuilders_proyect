@@ -25,7 +25,7 @@ public class IUsancionar extends JFrame{
 	JTextField dni;
 	JLabel lblid;
 	JLabel lbldni;
-	IUsancionar frame;
+	IUsancionar frame; 
 	
 	public IUsancionar(Sistema sistema) {		
 		try {
